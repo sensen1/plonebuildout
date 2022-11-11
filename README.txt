@@ -82,7 +82,7 @@ Structure
 
     .. code-block:: ini
 
-        extends = https://raw.githubusercontent.com/starzel/buildout/5.1/linkto/base.cfg
+        extends = https://github.com/sensen1/plonebuildout/blob/5.1/linkto/base.cfg
 
     This example refers to the tag 5.1 of this buildout that uses Plone 5.1 To use a different Plone-version simply change that to point to a different tag.
 
@@ -92,8 +92,8 @@ Structure
 ``base.cfg``
     This remote file conatains most of the commonly used logic used for prodcution. It also includes two version-files that are also hosted on github:
 
-    * `pinned_versions.cfg <https://raw.githubusercontent.com/starzel/buildout/5.1/linkto/pinned_versions.cfg>`_: Pinns the Plone-version using http://dist.plone.org/release/5.1/versions.cfg
-    * `floating_versions.cfg <https://raw.githubusercontent.com/starzel/buildout/5.1/linkto/floating_versions.cfg>`_: Pinns all commonly used addons of this buildout.
+    * `pinned_versions.cfg <https://github.com/sensen1/plonebuildout/blob/5.1/linkto/pinned_versions.cfg>`_: Pinns the Plone-version using http://dist.plone.org/release/5.1/versions.cfg
+    * `floating_versions.cfg <https://github.com/sensen1/plonebuildout/blob/5.1/linkto/floating_versions.cfg>`_: Pinns all commonly used addons of this buildout.
 
 ``pinned_versions_project.cfg``
     Here you pinn versions to overwrite or extend the hosted ``pinned_versions.cfg``. These eggs are usually pinned for a reason and are usually not safe to be upgraded.
@@ -107,63 +107,63 @@ Versions
 
 We support the following versions of Plone:
 
-- `6.0.0b3 <https://raw.githubusercontent.com/starzel/buildout/6.0.0b3/linkto/base.cfg>`_ (Python 3)
-- `6.0.0b2 <https://raw.githubusercontent.com/starzel/buildout/6.0.0b2/linkto/base.cfg>`_ (Python 3)
-- `6.0.0b1 <https://raw.githubusercontent.com/starzel/buildout/6.0.0b1/linkto/base.cfg>`_ (Python 3)
-- `6.0.0a6 <https://raw.githubusercontent.com/starzel/buildout/6.0.0a6/linkto/base.cfg>`_ (Python 3)
-- `6.0.0a4 <https://raw.githubusercontent.com/starzel/buildout/6.0.0a4/linkto/base.cfg>`_ (Python 3)
-- `6.0.0a3 <https://raw.githubusercontent.com/starzel/buildout/6.0.0a3/linkto/base.cfg>`_ (Python 3)
-- `6.0.0a2 <https://raw.githubusercontent.com/starzel/buildout/6.0.0a2/linkto/base.cfg>`_ (Python 3)
-- `6.0.0a1 <https://raw.githubusercontent.com/starzel/buildout/6.0.0a2/linkto/base.cfg>`_ (Python 3)
-- `5.2.9 <https://raw.githubusercontent.com/starzel/buildout/5.2.9/linkto/base.cfg>`_ (Python 2 and 3)
-- `5.2.8 <https://raw.githubusercontent.com/starzel/buildout/5.2.8/linkto/base.cfg>`_ (Python 2 and 3)
-- `5.2.7 <https://raw.githubusercontent.com/starzel/buildout/5.2.7/linkto/base.cfg>`_ (Python 2 and 3)
-- `5.2.6 <https://raw.githubusercontent.com/starzel/buildout/5.2.6/linkto/base.cfg>`_ (Python 2 and 3)
-- `5.2.5 <https://raw.githubusercontent.com/starzel/buildout/5.2.5/linkto/base.cfg>`_ (Python 2 and 3)
-- `5.2.4 <https://raw.githubusercontent.com/starzel/buildout/5.2.4/linkto/base.cfg>`_ (Python 2 and 3)
-- `5.2.3 <https://raw.githubusercontent.com/starzel/buildout/5.2.3/linkto/base.cfg>`_ (Python 2 and 3)
-- `5.2.2 <https://raw.githubusercontent.com/starzel/buildout/5.2.2/linkto/base.cfg>`_ (Python 2 and 3)
-- `5.2.1 <https://raw.githubusercontent.com/starzel/buildout/5.2.1/linkto/base.cfg>`_ (Python 2 and 3)
-- `5.2 <https://raw.githubusercontent.com/starzel/buildout/5.2/linkto/base.cfg>`_ (Python 2 and 3)
-- `5.1.7 <https://raw.githubusercontent.com/starzel/buildout/5.1.7/linkto/base.cfg>`_
-- `5.1.6 <https://raw.githubusercontent.com/starzel/buildout/5.1.6/linkto/base.cfg>`_
-- `5.1.5 <https://raw.githubusercontent.com/starzel/buildout/5.1.5/linkto/base.cfg>`_
-- `5.1.4 <https://raw.githubusercontent.com/starzel/buildout/5.1.4/linkto/base.cfg>`_
-- `5.1.3 <https://raw.githubusercontent.com/starzel/buildout/5.1.3/linkto/base.cfg>`_
-- `5.1.2 <https://raw.githubusercontent.com/starzel/buildout/5.1.2/linkto/base.cfg>`_
-- `5.1.1 <https://raw.githubusercontent.com/starzel/buildout/5.1.1/linkto/base.cfg>`_
-- `5.1 <https://raw.githubusercontent.com/starzel/buildout/5.1/linkto/base.cfg>`_
-- `5.0.10 <https://raw.githubusercontent.com/starzel/buildout/5.0.10/linkto/base.cfg>`_
-- `5.0.9 <https://raw.githubusercontent.com/starzel/buildout/5.0.9/linkto/base.cfg>`_
-- `5.0.8 <https://raw.githubusercontent.com/starzel/buildout/5.0.8/linkto/base.cfg>`_
-- `5.0.7 <https://raw.githubusercontent.com/starzel/buildout/5.0.7/linkto/base.cfg>`_
-- `5.0.6 <https://raw.githubusercontent.com/starzel/buildout/5.0.6/linkto/base.cfg>`_
-- `5.0.5 <https://raw.githubusercontent.com/starzel/buildout/5.0.5/linkto/base.cfg>`_
-- `5.0.4 <https://raw.githubusercontent.com/starzel/buildout/5.0.4/linkto/base.cfg>`_
-- `5.0.3 <https://raw.githubusercontent.com/starzel/buildout/5.0.3/linkto/base.cfg>`_
-- `5.0.2 <https://raw.githubusercontent.com/starzel/buildout/5.0.2/linkto/base.cfg>`_
-- `5.0 <https://raw.githubusercontent.com/starzel/buildout/5.0/linkto/base.cfg>`_
-- `4.3.20 <https://raw.githubusercontent.com/starzel/buildout/4.3.20/linkto/base.cfg>`_
-- `4.3.19 <https://raw.githubusercontent.com/starzel/buildout/4.3.19/linkto/base.cfg>`_
-- `4.3.18 <https://raw.githubusercontent.com/starzel/buildout/4.3.18/linkto/base.cfg>`_
-- `4.3.17 <https://raw.githubusercontent.com/starzel/buildout/4.3.17/linkto/base.cfg>`_
-- `4.3.15 <https://raw.githubusercontent.com/starzel/buildout/4.3.15/linkto/base.cfg>`_
-- `4.3.14 <https://raw.githubusercontent.com/starzel/buildout/4.3.14/linkto/base.cfg>`_
-- `4.3.11 <https://raw.githubusercontent.com/starzel/buildout/4.3.11/linkto/base.cfg>`_
-- `4.3.10 <https://raw.githubusercontent.com/starzel/buildout/4.3.10/linkto/base.cfg>`_
-- `4.3.9 <https://raw.githubusercontent.com/starzel/buildout/4.3.9/linkto/base.cfg>`_
-- `4.3.8 <https://raw.githubusercontent.com/starzel/buildout/4.3.8/linkto/base.cfg>`_
-- `4.3.7 <https://raw.githubusercontent.com/starzel/buildout/4.3.7/linkto/base.cfg>`_
-- `4.3.6 <https://raw.githubusercontent.com/starzel/buildout/4.3.6/linkto/base.cfg>`_
-- `4.3.4 <https://raw.githubusercontent.com/starzel/buildout/4.3.4/linkto/base.cfg>`_
-- `4.3.3 <https://raw.githubusercontent.com/starzel/buildout/4.3.3/linkto/base.cfg>`_
-- `4.3.2 <https://raw.githubusercontent.com/starzel/buildout/4.3.2/linkto/base.cfg>`_
-- `4.3.1 <https://raw.githubusercontent.com/starzel/buildout/4.3.1/linkto/base.cfg>`_
-- `4.3 <https://raw.githubusercontent.com/starzel/buildout/4.3/linkto/base.cfg>`_
-- `4.2.7 <https://raw.githubusercontent.com/starzel/buildout/4.2.7/linkto/base.cfg>`_
-- `4.2.5 <https://raw.githubusercontent.com/starzel/buildout/4.2.5/linkto/base.cfg>`_
-- `4.2.3 <https://raw.githubusercontent.com/starzel/buildout/4.2.3/linkto/base.cfg>`_
-- `4.2.2 <https://raw.githubusercontent.com/starzel/buildout/4.2.2/linkto/base.cfg>`_
+- `6.0.0b3 <https://github.com/sensen1/plonebuildout/blob/6.0.0b3/linkto/base.cfg>`_ (Python 3)
+- `6.0.0b2 <https://github.com/sensen1/plonebuildout/blob/6.0.0b2/linkto/base.cfg>`_ (Python 3)
+- `6.0.0b1 <https://github.com/sensen1/plonebuildout/blob/6.0.0b1/linkto/base.cfg>`_ (Python 3)
+- `6.0.0a6 <https://github.com/sensen1/plonebuildout/blob/6.0.0a6/linkto/base.cfg>`_ (Python 3)
+- `6.0.0a4 <https://github.com/sensen1/plonebuildout/blob/6.0.0a4/linkto/base.cfg>`_ (Python 3)
+- `6.0.0a3 <https://github.com/sensen1/plonebuildout/blob/6.0.0a3/linkto/base.cfg>`_ (Python 3)
+- `6.0.0a2 <https://github.com/sensen1/plonebuildout/blob/6.0.0a2/linkto/base.cfg>`_ (Python 3)
+- `6.0.0a1 <https://github.com/sensen1/plonebuildout/blob/6.0.0a2/linkto/base.cfg>`_ (Python 3)
+- `5.2.9 <https://github.com/sensen1/plonebuildout/blob/5.2.9/linkto/base.cfg>`_ (Python 2 and 3)
+- `5.2.8 <https://github.com/sensen1/plonebuildout/blob/5.2.8/linkto/base.cfg>`_ (Python 2 and 3)
+- `5.2.7 <https://github.com/sensen1/plonebuildout/blob/5.2.7/linkto/base.cfg>`_ (Python 2 and 3)
+- `5.2.6 <https://github.com/sensen1/plonebuildout/blob/5.2.6/linkto/base.cfg>`_ (Python 2 and 3)
+- `5.2.5 <https://github.com/sensen1/plonebuildout/blob/5.2.5/linkto/base.cfg>`_ (Python 2 and 3)
+- `5.2.4 <https://github.com/sensen1/plonebuildout/blob/5.2.4/linkto/base.cfg>`_ (Python 2 and 3)
+- `5.2.3 <https://github.com/sensen1/plonebuildout/blob/5.2.3/linkto/base.cfg>`_ (Python 2 and 3)
+- `5.2.2 <https://github.com/sensen1/plonebuildout/blob/5.2.2/linkto/base.cfg>`_ (Python 2 and 3)
+- `5.2.1 <https://github.com/sensen1/plonebuildout/blob/5.2.1/linkto/base.cfg>`_ (Python 2 and 3)
+- `5.2 <https://github.com/sensen1/plonebuildout/blob/5.2/linkto/base.cfg>`_ (Python 2 and 3)
+- `5.1.7 <https://github.com/sensen1/plonebuildout/blob/5.1.7/linkto/base.cfg>`_
+- `5.1.6 <https://github.com/sensen1/plonebuildout/blob/5.1.6/linkto/base.cfg>`_
+- `5.1.5 <https://github.com/sensen1/plonebuildout/blob/5.1.5/linkto/base.cfg>`_
+- `5.1.4 <https://github.com/sensen1/plonebuildout/blob/5.1.4/linkto/base.cfg>`_
+- `5.1.3 <https://github.com/sensen1/plonebuildout/blob/5.1.3/linkto/base.cfg>`_
+- `5.1.2 <https://github.com/sensen1/plonebuildout/blob/5.1.2/linkto/base.cfg>`_
+- `5.1.1 <https://github.com/sensen1/plonebuildout/blob/5.1.1/linkto/base.cfg>`_
+- `5.1 <https://github.com/sensen1/plonebuildout/blob/5.1/linkto/base.cfg>`_
+- `5.0.10 <https://github.com/sensen1/plonebuildout/blob/5.0.10/linkto/base.cfg>`_
+- `5.0.9 <https://github.com/sensen1/plonebuildout/blob/5.0.9/linkto/base.cfg>`_
+- `5.0.8 <https://github.com/sensen1/plonebuildout/blob/5.0.8/linkto/base.cfg>`_
+- `5.0.7 <https://github.com/sensen1/plonebuildout/blob/5.0.7/linkto/base.cfg>`_
+- `5.0.6 <https://github.com/sensen1/plonebuildout/blob/5.0.6/linkto/base.cfg>`_
+- `5.0.5 <https://github.com/sensen1/plonebuildout/blob/5.0.5/linkto/base.cfg>`_
+- `5.0.4 <https://github.com/sensen1/plonebuildout/blob/5.0.4/linkto/base.cfg>`_
+- `5.0.3 <https://github.com/sensen1/plonebuildout/blob/5.0.3/linkto/base.cfg>`_
+- `5.0.2 <https://github.com/sensen1/plonebuildout/blob/5.0.2/linkto/base.cfg>`_
+- `5.0 <https://github.com/sensen1/plonebuildout/blob/5.0/linkto/base.cfg>`_
+- `4.3.20 <https://github.com/sensen1/plonebuildout/blob/4.3.20/linkto/base.cfg>`_
+- `4.3.19 <https://github.com/sensen1/plonebuildout/blob/4.3.19/linkto/base.cfg>`_
+- `4.3.18 <https://github.com/sensen1/plonebuildout/blob/4.3.18/linkto/base.cfg>`_
+- `4.3.17 <https://github.com/sensen1/plonebuildout/blob/4.3.17/linkto/base.cfg>`_
+- `4.3.15 <https://github.com/sensen1/plonebuildout/blob/4.3.15/linkto/base.cfg>`_
+- `4.3.14 <https://github.com/sensen1/plonebuildout/blob/4.3.14/linkto/base.cfg>`_
+- `4.3.11 <https://github.com/sensen1/plonebuildout/blob/4.3.11/linkto/base.cfg>`_
+- `4.3.10 <https://github.com/sensen1/plonebuildout/blob/4.3.10/linkto/base.cfg>`_
+- `4.3.9 <https://github.com/sensen1/plonebuildout/blob/4.3.9/linkto/base.cfg>`_
+- `4.3.8 <https://github.com/sensen1/plonebuildout/blob/4.3.8/linkto/base.cfg>`_
+- `4.3.7 <https://github.com/sensen1/plonebuildout/blob/4.3.7/linkto/base.cfg>`_
+- `4.3.6 <https://github.com/sensen1/plonebuildout/blob/4.3.6/linkto/base.cfg>`_
+- `4.3.4 <https://github.com/sensen1/plonebuildout/blob/4.3.4/linkto/base.cfg>`_
+- `4.3.3 <https://github.com/sensen1/plonebuildout/blob/4.3.3/linkto/base.cfg>`_
+- `4.3.2 <https://github.com/sensen1/plonebuildout/blob/4.3.2/linkto/base.cfg>`_
+- `4.3.1 <https://github.com/sensen1/plonebuildout/blob/4.3.1/linkto/base.cfg>`_
+- `4.3 <https://github.com/sensen1/plonebuildout/blob/4.3/linkto/base.cfg>`_
+- `4.2.7 <https://github.com/sensen1/plonebuildout/blob/4.2.7/linkto/base.cfg>`_
+- `4.2.5 <https://github.com/sensen1/plonebuildout/blob/4.2.5/linkto/base.cfg>`_
+- `4.2.3 <https://github.com/sensen1/plonebuildout/blob/4.2.3/linkto/base.cfg>`_
+- `4.2.2 <https://github.com/sensen1/plonebuildout/blob/4.2.2/linkto/base.cfg>`_
 
 To use this buildout with a version of Plone that is currently in development (a.k.a. the `Coredev <https://github.com/plone/buildout.coredev/>`_) please use:
 
@@ -454,7 +454,7 @@ Sentry logging
 Hotfixes
 ++++++++
 
-This buildout automatically includes the correct Hotfixes for the version of Plone you use. E.g. the extends-file for Plone 5.0.6 https://raw.githubusercontent.com/starzel/buildout/5.0.6/linkto/base.cfg pulls in the file https://raw.githubusercontent.com/starzel/buildout/master/linkto/hotfixes/5.0.6.cfg which in turn contains the pinns and eggs for all HotFixes for that version.
+This buildout automatically includes the correct Hotfixes for the version of Plone you use. E.g. the extends-file for Plone 5.0.6 https://github.com/sensen1/plonebuildout/blob/5.0.6/linkto/base.cfg pulls in the file https://github.com/sensen1/plonebuildout/blob/master/linkto/hotfixes/5.0.6.cfg which in turn contains the pinns and eggs for all HotFixes for that version.
 
 By having the hotfixes-files in the master-branch we can easily update Hotfixes for each version without having to move any tags. The same day a Hotfix is published the corresponding extends-files will be updated. You simply have to rerun buildout and restart your site to include them.
 

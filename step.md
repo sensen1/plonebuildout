@@ -1,0 +1,1 @@
+* echo  "[buildout]"\n"login = admin"\n"password = admin" > secret.cfg

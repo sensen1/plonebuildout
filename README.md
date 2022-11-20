@@ -44,24 +44,6 @@ Quickstart
     git clone https://github.com/starzel/buildout SOME_PROJECT
     cd SOME_PROJECT
 
-Remove all files that are not needed for a project but are only used for the buildout itself.
-
-.. code-block:: bash
-
-    rm -rf linkto README.rst README.txt VERSION.txt local_coredev.cfg CHANGES.rst .github
-
-If you're not developing the buildout itself you want a create a new git repo.
-
-.. code-block:: bash
-
-    rm -rf .git && git init
-
-Add a file that contains a passwort. Do **not** use ``admin`` as a password in production!
-
-.. code-block:: bash
-
-    echo -e "[buildout]\nlogin = admin\npassword = admin" > secret.cfg
-
 Symlink to the file that best fits you local environment. At first that is usually development. Later you can use production or test. This buildout only uses ``local.cfg`` and ignores all ``local_*.cfg``.
 
 .. code-block:: bash
@@ -75,6 +57,8 @@ Create a virtualenv in Python 2.7 or Python 3.7 (Plone 5.2 only).
     virtualenv .  # for Python 2.7
     python3.7 -m venv .  # for Python 3 (Plone 5.2 only)
 
+source ./bin/activate .
+
 Install and configure Plone
 
 .. code-block:: bash
@@ -82,11 +66,9 @@ Install and configure Plone
     ./bin/pip install -r requirements.txt
     ./bin/buildout
 
-Install git pre-commit hooks
+启动命令
 
-.. code-block:: bash
-
-    ./bin/pre-commit install
+./bin/instance start
 
 
 Structure

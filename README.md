@@ -13,6 +13,8 @@ rust
 
 py39-sqlite3
 
+https://gist.github.com/apearson/56a2cd137099dbeaf6683ef99aa43ce0
+
 ====================
 The Starzel Buildout
 ====================

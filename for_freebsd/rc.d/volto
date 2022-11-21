@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# $FreeBSD: 13.1 2022
+#
+# PROVIDE: volto
+# REQUIRE: NETWORKING
+# KEYWORD: shutdown
+#
+# Add the following line to /etc/rc.conf to enable volto:
+#
+# volto_enable="YES"
+#
+
+. /etc/rc.subr
+
+name="volto" # How the service will be invoked from service
+rcvar="${name}_enable"  # The variable in rc.conf that will allow this service to run
+load_rc_config $name # Loads the config file, if relevant.
+pidfile=/var/run/${name}.pid
+
+# ${name}_chdir="/usr/home/sensen/plone6/volto/v1"
+
+command="/usr/sbin/daemon"
+
+command_args="start:prod /usr/local/bin/node /usr/home/sensen/plone6/volto/v1"
+
+# export node="/usr/local/bin/node"
+
+# start_cmd="cd /usr/home/sensen/plone6/volto/v1; /usr/local/bin/yarn start:prod"
+
+
+# command="/usr/sbin/daemon"
+# #command_args="-r -u USERNAME -P /var/run/volto.pid /usr/local/bin/node /home/USERNAME/PROGDIR" # cjayho: restart if crashed
+# command_args="-u USERNAME -P /var/run/volto.pid /usr/local/bin/node /home/USERNAME/PROGDIR"
+
+# load_rc_config $name
+# : ${volto_enable:="NO"}
+
+run_rc_command "$1"
+
+
+# volto_enable="YES"

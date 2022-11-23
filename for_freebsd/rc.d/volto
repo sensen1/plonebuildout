@@ -1,42 +1,63 @@
 #!/bin/sh
 
-# $FreeBSD: 13.1 2022
+# $FreeBSD: 13.1 2022 sensen
 #
 # PROVIDE: volto
-# REQUIRE: NETWORKING
+# REQUIRE: LOGIN
 # KEYWORD: shutdown
-#
-# Add the following line to /etc/rc.conf to enable volto:
-#
-# volto_enable="YES"
-#
+
 
 . /etc/rc.subr
 
 name="volto" # How the service will be invoked from service
+title="myvolto"
 rcvar="${name}_enable"  # The variable in rc.conf that will allow this service to run
+start_precmd="${name}_prestart"
+
 load_rc_config $name # Loads the config file, if relevant.
-pidfile=/var/run/${name}.pid
+: ${volto_enable:=no}  # Default: Do not enable volto
+: ${volto_user="sensen"} # Default: Run volto as sensen
+
+piddir="/var/run/${volto_user}"
+pidfile="${piddir}/${name}_daemon.pid"
+pidfile_child="${piddir}/${name}_volto.pid"
+
+
+volto_chdir="/usr/home/sensen/plone6/volto/v1"
+
+proc_cmd="/usr/local/bin/node"
+proc_args="build/server.js"
+
+command="/usr/sbin/daemon"
+command_args="-f -t ${title} -P ${pidfile} -u ${volto_user} -p ${pidfile_child} -r ${proc_cmd} ${proc_args}"
+
+volto_prestart()
+{
+    [ -z "${XDG_RUNTIME_DIR}" ] && XDG_RUNTIME_DIR="/tmp/$(id -u ${volto_user})-runtime-dir"
+    ! [ -d "${XDG_RUNTIME_DIR}" ] && \
+    install -d -o "$(id -u ${volto_user})" -m 0700 "${XDG_RUNTIME_DIR}" -
+
+    ! [ -d "${piddir}" ] && \
+    install -d -o "$(id -u ${volto_user})" -g "$(id -u ${volto_user})" "${piddir}" -
+    return 0
+}
+
+
+# command_args="-f -t ${title} -u ${volto_user} -P ${pidfile} ${volto_command} ${volto_flags}"
+
+
 
 # ${name}_chdir="/usr/home/sensen/plone6/volto/v1"
 
-command="/usr/sbin/daemon"
+# ${name}_env="/usr/local/bin/node"
 
-command_args="start:prod /usr/local/bin/node /usr/home/sensen/plone6/volto/v1"
+# volto_user="sensen"
+# volto_command="/usr/local/bin/node build/server.js"
+
+# "start:prod /usr/local/bin/node /usr/home/sensen/plone6/volto/v1"
 
 # export node="/usr/local/bin/node"
 
-# start_cmd="cd /usr/home/sensen/plone6/volto/v1; /usr/local/bin/yarn start:prod"
-
-
-# command="/usr/sbin/daemon"
-# #command_args="-r -u USERNAME -P /var/run/volto.pid /usr/local/bin/node /home/USERNAME/PROGDIR" # cjayho: restart if crashed
-# command_args="-u USERNAME -P /var/run/volto.pid /usr/local/bin/node /home/USERNAME/PROGDIR"
-
-# load_rc_config $name
-# : ${volto_enable:="NO"}
+# start_cmd="cd /usr/home/sensen/plone6/volto/v1; /usr/local/bin/node build/server.js"
 
 run_rc_command "$1"
-
-
-# volto_enable="YES"

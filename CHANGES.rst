@@ -8,7 +8,7 @@ Changes
 3.3
 ===
 - Add 5.0.6
-- Move Hotfixes from tags to master branch at https://raw.githubusercontent.com/starzel/buildout/master/linkto/hotfixes/<version>.cfg
+- Move Hotfixes from tags to master branch at https://raw.githubusercontent.com/sensen1/plonebuildout/master/linkto/hotfixes/<version>.cfg
 - Increase Varnish Cache Size
 - Add 5.0.5
 - Add 5.0.4
